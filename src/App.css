@@ -30,14 +30,19 @@
   }
   
   .home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
     text-align: center;
     padding: 2rem;
   }
   
   .tool-cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 2rem;
     margin-top: 2rem;
   }
@@ -51,6 +56,10 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    text-align: center; /* Ensure text alignment */
   }
   
   .tool-card:hover {
@@ -60,8 +69,22 @@
   
   .tool-icon {
     font-size: 3rem;
-    display: block;
     margin-bottom: 1rem;
+    align-self: center; /* Center just the icon */
+  }
+  
+  .tool-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0; /* Space below h3 */
+    width: 100%; /* Ensure full width */
+    text-align: center;
+  }
+  
+  .tool-card p {
+    font-size: 0.7rem;
+    margin: 0; /* Remove default margins */
+    width: 100%; /* Ensure full width */
+    text-align: center;   
   }
   
   .app-footer {
@@ -73,7 +96,7 @@
   }
 
   /* App.css - Updated Layout */
-.home-page {
+  .home-page {
     text-align: center;
     padding: 2rem;
     max-width: 1200px;
@@ -84,13 +107,6 @@
     text-align: center; /* Align "Welcome" to left */
     margin-bottom: 1.5rem;
     color: var(--primary-color);
-  }
-  
-  .tool-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    justify-items: start; /* Align cards to start */
   }
   
   .tool-card {
@@ -107,6 +123,10 @@
   }
   
   /* Add this for your future roadmap cards */
+  .tool-card.calculator {
+    border-top: 4px solid #4285f4;
+  }
+
   .tool-card.gram-positive {
     border-top: 4px solid #6fb98f; /* Green accent */
   }

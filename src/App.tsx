@@ -1,4 +1,5 @@
 // App.tsx
+import React from 'react'; // Add this line
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -69,7 +70,7 @@ export default function App() {
             
             <div className="tool-cards">
               <button 
-                className="tool-card"
+                className="tool-card calculator"
                 onClick={() => setActiveTool('Biochemical Calculator')}
               >
                 <span className="tool-icon">🧪</span>
@@ -99,8 +100,41 @@ export default function App() {
         )}
       </main>
 
-      <footer className="app-footer">
-        <p>&copy; {new Date().getFullYear()} Learn Microbes</p>
+      <footer>
+        <div className="footer-content">
+          <div className="footer-grid">
+            <div className="footer-about">
+              <h3>About This Project</h3>
+              <p>This free tool was created by a microbiology lab technologist to help students and professionals with bacterial identification. It's based on standard biochemical test patterns used in clinical laboratories.</p>
+            </div>
+            
+            <div className="footer-socials">
+              <h3>Connect</h3>
+              <div className="social-icons">
+                <a href="https://instagram.com/franzescuzar" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="mailto:learnmicrobes@outlook.com?subject=Question%20About%20LearnMicrobes" target="_blank" rel="noopener noreferrer">
+                  <i className="fas fa-envelope"></i> Email Us
+                </a>
+              </div>
+            </div>
+            
+            <div className="footer-roadmap">
+              <h3>What's Coming Next</h3>
+              <ul>
+                <li>✓ Current: Enterobacteriaceae ID</li>
+                <li>→ Next: Gram-positive ID Tool</li>
+                <li>→ Future: Gram-negative ID Tool</li>
+                <li>→ Future: Mobile App Version</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="footer-copyright">
+            <p>&copy; 2025 LearnMicrobes.com | Made for educational purposes</p>
+          </div>
+        </div>
       </footer>
     </div>
   );

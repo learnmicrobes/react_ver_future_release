@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFlask, faBook } from '@fortawesome/free-solid-svg-icons';
 import './ToolComponent.css';
+import React from 'react'; // Add this line
 
 interface ToolComponentProps {
   tool: string;
